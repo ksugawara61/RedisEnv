@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install package vim
+      yum: pkg=vim state=latest
+    - name: install package emacs
+      yum: pkg=emacs state=latest
+    - name: install package git
+      yum: pkg=git state=latest
+    - name: install package epel-release
+      yum: name=https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+    - name: install package redis
+      yum: pkg=redis state=latest
